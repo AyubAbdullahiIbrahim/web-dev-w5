@@ -1,0 +1,243 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpendWise Dashboard</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="brand">
+                <h2>SpendWise</h2>
+                <p>Budget Dashboard</p>
+            </div>
+
+            <nav class="navigation" aria-label="Main navigation">
+                <a href="#" class="nav-item active">Dashboard</a>
+                <a href="#" class="nav-item">Expenses</a>
+                <a href="#" class="nav-item">Income</a>
+                <a href="#" class="nav-item">Savings</a>
+                <a href="#" class="nav-item">Reports</a>
+                <a href="#" class="nav-item">Settings</a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <p>Track smart.</p>
+                <p>Spend wisely.</p>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <!-- Header -->
+            <header class="dashboard-header">
+                <div class="welcome">
+                    <p class="eyebrow">Financial Overview</p>
+                    <h1>Welcome to SpendWise</h1>
+                    <p>Here is your spending summary for this month.</p>
+                </div>
+
+                <div class="header-actions">
+                    <span class="balance-label">Total Balance</span>
+                    <strong>KES 85,450</strong>
+                </div>
+            </header>
+
+            <!-- Summary -->
+            <section class="summary-section">
+                <div class="summary-card">
+                    <span>Monthly Income</span>
+                    <strong>KES 120,000</strong>
+                </div>
+
+                <div class="summary-card">
+                    <span>Total Expenses</span>
+                    <strong>KES 34,550</strong>
+                </div>
+
+                <div class="summary-card">
+                    <span>Total Savings</span>
+                    <strong>KES 50,900</strong>
+                </div>
+            </section>
+
+            <!-- Categories -->
+            <section class="categories-section">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">Spending Categories</p>
+                        <h2>Where your money goes</h2>
+                    </div>
+
+                    <span class="month">September 2026</span>
+                </div>
+
+                <div class="category-grid">
+
+                    <!-- Food -->
+                    <article class="category-card" tabindex="0">
+                        <div class="card-top">
+                            <div class="category-icon">🍽️</div>
+                            <span class="percentage">18%</span>
+                        </div>
+
+                        <div class="card-content">
+                            <h3>Food</h3>
+                            <p>Groceries and meals</p>
+                        </div>
+
+                        <div class="card-bottom">
+                            <strong>KES 6,200</strong>
+                            <span>of KES 34,550</span>
+                        </div>
+                    </article>
+
+                    <!-- Transport -->
+                    <article class="category-card" tabindex="0">
+                        <div class="card-top">
+                            <div class="category-icon">🚌</div>
+                            <span class="percentage">12%</span>
+                        </div>
+
+                        <div class="card-content">
+                            <h3>Transport</h3>
+                            <p>Travel and commuting</p>
+                        </div>
+
+                        <div class="card-bottom">
+                            <strong>KES 4,100</strong>
+                            <span>of KES 34,550</span>
+                        </div>
+                    </article>
+
+                    <!-- Rent -->
+                    <article class="category-card" tabindex="0">
+                        <div class="card-top">
+                            <div class="category-icon">🏠</div>
+                            <span class="percentage">35%</span>
+                        </div>
+
+                        <div class="card-content">
+                            <h3>Rent</h3>
+                            <p>Housing and accommodation</p>
+                        </div>
+
+                        <div class="card-bottom">
+                            <strong>KES 12,000</strong>
+                            <span>of KES 34,550</span>
+                        </div>
+                    </article>
+
+                    <!-- Entertainment -->
+                    <article class="category-card" tabindex="0">
+                        <div class="card-top">
+                            <div class="category-icon">🎬</div>
+                            <span class="percentage">8%</span>
+                        </div>
+
+                        <div class="card-content">
+                            <h3>Entertainment</h3>
+                            <p>Leisure and activities</p>
+                        </div>
+
+                        <div class="card-bottom">
+                            <strong>KES 2,750</strong>
+                            <span>of KES 34,550</span>
+                        </div>
+                    </article>
+
+                    <!-- Savings -->
+                    <article class="category-card" tabindex="0">
+                        <div class="card-top">
+                            <div class="category-icon">💰</div>
+                            <span class="percentage">20%</span>
+                        </div>
+
+                        <div class="card-content">
+                            <h3>Savings</h3>
+                            <p>Future financial goals</p>
+                        </div>
+
+                        <div class="card-bottom">
+                            <strong>KES 6,900</strong>
+                            <span>Monthly target</span>
+                        </div>
+                    </article>
+
+                    <!-- Utilities -->
+                    <article class="category-card" tabindex="0">
+                        <div class="card-top">
+                            <div class="category-icon">💡</div>
+                            <span class="percentage">7%</span>
+                        </div>
+
+                        <div class="card-content">
+                            <h3>Utilities</h3>
+                            <p>Electricity, water and internet</p>
+                        </div>
+
+                        <div class="card-bottom">
+                            <strong>KES 2,600</strong>
+                            <span>of KES 34,550</span>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <!-- Recent Transactions -->
+            <section class="recent-section">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">Activity</p>
+                        <h2>Recent Transactions</h2>
+                    </div>
+                </div>
+
+                <div class="transaction-list">
+                    <div class="transaction">
+                        <div>
+                            <strong>Supermarket</strong>
+                            <span>Food • Today</span>
+                        </div>
+                        <strong>- KES 2,400</strong>
+                    </div>
+
+                    <div class="transaction">
+                        <div>
+                            <strong>Bus Fare</strong>
+                            <span>Transport • Yesterday</span>
+                        </div>
+                        <strong>- KES 500</strong>
+                    </div>
+
+                    <div class="transaction">
+                        <div>
+                            <strong>Electricity Bill</strong>
+                            <span>Utilities • 20 Sep</span>
+                        </div>
+                        <strong>- KES 1,800</strong>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
+

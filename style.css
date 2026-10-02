@@ -1,0 +1,464 @@
+
+/* =========================================
+   SpendWise Dashboard
+   Week 4 - CSS Grid & Flexbox
+   ========================================= */
+
+/* ---------- Theme Variables ---------- */
+
+:root {
+    --brand-color: #2e7d32;
+    --accent-color: #14b8a6;
+    --surface-color: #ffffff;
+    --background-color: #f4f7f6;
+    --primary-text: #1f2937;
+    --secondary-text: #6b7280;
+    --border-color: #e5e7eb;
+    --sidebar-text: #ffffff;
+    --shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+/* ---------- Reset ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: var(--background-color);
+    color: var(--primary-text);
+    line-height: 1.6;
+}
+
+/* ---------- Dashboard Grid ---------- */
+
+.dashboard {
+    min-height: 100vh;
+    display: grid;
+
+    /* CSS Grid for overall page layout */
+    grid-template-columns: 240px 1fr;
+}
+
+/* ---------- Sidebar ---------- */
+
+.sidebar {
+    background: var(--brand-color);
+    color: var(--sidebar-text);
+    padding: 28px 20px;
+
+    /* Flexbox inside sidebar */
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.brand {
+    display: flex;
+    flex-direction: column;
+}
+
+.brand h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.6rem;
+}
+
+.brand p {
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.nav-item {
+    color: var(--sidebar-text);
+    text-decoration: none;
+    padding: 12px 14px;
+    border-radius: 10px;
+
+    /* Flexbox */
+    display: flex;
+    align-items: center;
+
+    transition:
+        background-color 200ms ease,
+        transform 200ms ease;
+}
+
+.nav-item:hover,
+.nav-item:focus {
+    background-color: rgba(255, 255, 255, 0.15);
+    transform: translateX(3px);
+}
+
+.nav-item.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    font-weight: 600;
+}
+
+.sidebar-footer {
+    margin-top: auto;
+    font-size: 0.85rem;
+    opacity: 0.75;
+}
+
+/* ---------- Main Content ---------- */
+
+.main-content {
+    padding: 32px;
+    min-width: 0;
+}
+
+/* ---------- Header ---------- */
+
+.dashboard-header {
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 18px;
+    padding: 24px;
+
+    /* Flexbox */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    box-shadow: var(--shadow);
+}
+
+.welcome {
+    display: flex;
+    flex-direction: column;
+}
+
+.eyebrow {
+    color: var(--brand-color);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.welcome h1,
+.section-heading h2 {
+    font-family: "Poppins", sans-serif;
+}
+
+.welcome h1 {
+    font-size: 1.8rem;
+    margin: 4px 0;
+}
+
+.welcome p:last-child {
+    color: var(--secondary-text);
+}
+
+.header-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.balance-label {
+    color: var(--secondary-text);
+    font-size: 0.8rem;
+}
+
+.header-actions strong {
+    color: var(--brand-color);
+    font-size: 1.35rem;
+}
+
+/* ---------- Summary Cards ---------- */
+
+.summary-section {
+    margin-top: 24px;
+
+    /* CSS Grid */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.summary-card {
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 20px;
+
+    /* Flexbox */
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    box-shadow: var(--shadow);
+}
+
+.summary-card span {
+    color: var(--secondary-text);
+    font-size: 0.85rem;
+}
+
+.summary-card strong {
+    font-size: 1.25rem;
+}
+
+/* ---------- Categories ---------- */
+
+.categories-section,
+.recent-section {
+    margin-top: 32px;
+}
+
+.section-heading {
+    margin-bottom: 16px;
+
+    /* Flexbox */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+.section-heading h2 {
+    font-size: 1.3rem;
+}
+
+.month {
+    color: var(--secondary-text);
+    font-size: 0.85rem;
+}
+
+/* ---------- Category Grid ---------- */
+
+.category-grid {
+    /* CSS Grid */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+/* ---------- Category Cards ---------- */
+
+.category-card {
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 20px;
+    min-height: 210px;
+
+    /* Flexbox */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    box-shadow: var(--shadow);
+
+    /* Micro-interaction */
+    transition:
+        transform 200ms ease,
+        box-shadow 200ms ease;
+}
+
+/* Hover and keyboard focus */
+.category-card:hover,
+.category-card:focus {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+/* Make keyboard focus visible */
+.category-card:focus {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 3px;
+}
+
+/* ---------- Card Content ---------- */
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.category-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    background: var(--background-color);
+
+    /* Flexbox */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.3rem;
+}
+
+.percentage {
+    color: var(--brand-color);
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.card-content h3 {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.1rem;
+}
+
+.card-content p {
+    color: var(--secondary-text);
+    font-size: 0.85rem;
+}
+
+.card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.card-bottom strong {
+    font-size: 1.05rem;
+}
+
+.card-bottom span {
+    color: var(--secondary-text);
+    font-size: 0.72rem;
+}
+
+/* ---------- Recent Transactions ---------- */
+
+.recent-section {
+    margin-bottom: 32px;
+}
+
+.transaction-list {
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.transaction {
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border-color);
+
+    /* Flexbox */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.transaction:last-child {
+    border-bottom: none;
+}
+
+.transaction div {
+    display: flex;
+    flex-direction: column;
+}
+
+.transaction span {
+    color: var(--secondary-text);
+    font-size: 0.8rem;
+}
+
+.transaction > strong {
+    white-space: nowrap;
+}
+
+/* =========================================
+   Responsive Design
+   Below 768px = Single Column
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    .dashboard {
+        /* Single-column layout */
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        padding: 20px;
+
+        /* Flexbox */
+        flex-direction: column;
+    }
+
+    .navigation {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .nav-item {
+        flex: 1 1 auto;
+    }
+
+    .sidebar-footer {
+        display: none;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+
+    .dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-actions {
+        align-items: flex-start;
+    }
+
+    .summary-section {
+        grid-template-columns: 1fr;
+    }
+
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* =========================================
+   Stretch Goal: Dark Theme
+   Only CSS variables are overridden
+   ========================================= */
+
+@media (prefers-color-scheme: dark) {
+
+    :root {
+        --brand-color: #66bb6a;
+        --accent-color: #2dd4bf;
+        --surface-color: #1f2937;
+        --background-color: #111827;
+        --primary-text: #f3f4f6;
+        --secondary-text: #9ca3af;
+        --border-color: #374151;
+        --sidebar-text: #ffffff;
+        --shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    }
+}
+
